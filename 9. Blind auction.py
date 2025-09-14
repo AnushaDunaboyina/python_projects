@@ -1,3 +1,5 @@
+# Blind auction project
+
 bids = {}
 
 while True:
