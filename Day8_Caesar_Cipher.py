@@ -1,7 +1,6 @@
+# Caesar Cipher
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-
-
 
 def caesor(original_text, shift_amount, encode_or_decode):
     result_text = ""
@@ -24,7 +23,6 @@ def caesor(original_text, shift_amount, encode_or_decode):
 
     print(f"Result text = {result_text}")
 
-    
 while True:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: \n").lower()
     text = input("Type your message: \n").lower()
