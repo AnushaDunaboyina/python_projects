@@ -21,7 +21,7 @@ def caesor(original_text, shift_amount, encode_or_decode):
             else:
                 result_text += letter        
 
-    print(f"Result text = {result_text}")
+    print(f"Here is the {encode_or_decode} result:\n{result_text.strip()}")
 
 while True:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: \n").lower()
@@ -33,10 +33,5 @@ while True:
     go_again = input("Type 'yes' if you want to go again. Otherwise, type 'no': ")
     if go_again != "yes":
         break
-
-
-
-
-
 
 
