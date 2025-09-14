@@ -5,12 +5,12 @@ text = input("Type your message: \n").lower()
 shift = input("Type the shift number: \n")
 
 
-def encrypt(text, shift):
+def encrypt(original_text, shift_amount):
     encrypt_text = ""
     
-    for letter in text:
+    for letter in original_text:
         if letter in alphabet:
-            new_index = (int(alphabet.index(letter)) + int(shift)) % 26
+            new_index = (int(alphabet.index(letter)) + int(shift_amount)) % 26
             encrypt_text += alphabet[new_index]
         else:
             encrypt_text += letter          # spaces or symbols
