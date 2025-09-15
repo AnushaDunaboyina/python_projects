@@ -9,7 +9,7 @@ while True:
 
     print(f"    Your cards: {your_first_hand}, current score: {sum_of_your_hands}")
 
-    computer_first_hand = [random.choice(cards) for card in range(2)]
+    computer_first_hand = [random.choice(cards) for _ in range(2)]
     sum_of_comp_hand = sum(computer_first_hand)
 
     print(f"Computer's first card: {computer_first_hand[0]}")
@@ -67,7 +67,59 @@ while True:
 
 
     
+"""
+import random
 
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+def deal_card():
+    return random.choice(cards)
+
+def calculate_score(hand):
+    score = sum(hand)
+    # Adjust for Ace if score is over 21
+    while score > 21 and 11 in hand:
+        hand[hand.index(11)] = 1
+        score = sum(hand)
+    return score
+
+def compare_scores(player, computer):
+    if player > 21:
+        return "You went over. You lose"
+    elif computer > 21:
+        return "Computer went over. You win"
+    elif player == computer:
+        return "It's a draw"
+    elif player > computer:
+        return "You win"
+    else:
+        return "You lose"
+
+def ask_to_play_again():
+    return input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == 'y'
+
+while True:
+    player_hand = [deal_card(), deal_card()]
+    computer_hand = [deal_card(), deal_card()]
+
+    print(f"    Your cards: {player_hand}, current score: {calculate_score(player_hand)}")
+    print(f"Computer's first card: {computer_hand[0]}")
+
+    if input("Type 'y' to get another card, type 'n' to pass: ").lower() == 'y':
+        player_hand.append(deal_card())
+        computer_hand.append(deal_card())
+
+    player_score = calculate_score(player_hand)
+    computer_score = calculate_score(computer_hand)
+
+    print(f"    Your final hand: {player_hand}, final score: {player_score}")
+    print(f"    Computer's final hand: {computer_hand}, final score: {computer_score}")
+    print(compare_scores(player_score, computer_score))
+    print("*****************************")
+
+    if not ask_to_play_again():
+        break
+    """
 
 
 
