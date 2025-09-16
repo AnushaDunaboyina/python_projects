@@ -1,16 +1,18 @@
+# Prime Number Checker
+
 while True:
     def is_prime(num):
         if num <= 1 :
-            return False
+            return "Not a prime number"
 
         # Check for divisibility from 2 up to the square root of num
 
         for i in range(2, int(num**0.5) + 1):
             if num % i == 0:            # If divisible by any number other than 1 and itself, it's not prime
 
-                return False
+                return "Not a prime number"
         else:
-            return True
+            return "It's a prime number"
 
     print(is_prime(int(input("Enter a number: "))))
 
