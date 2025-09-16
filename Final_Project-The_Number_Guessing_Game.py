@@ -9,16 +9,16 @@ def easy_or_hard():
     elif level == "hard":
         return 5
 
-def game_condition(num, original_number):
+def game_condition(your_number, original_number):
 
-        if num == original_number:
+        if your_number == original_number:
             print("Number matched, You win! \U0001F604")
             return True
 
-        elif num > original_number:
+        elif your_number > original_number:
             print("Too high.")
         
-        elif num < original_number:
+        elif your_number < original_number:
             print("Too low.")
         return False
 
@@ -35,9 +35,9 @@ while True:
     for i in range(easy_or_hard(), 0, -1):
         
         print(f"You have {i} attempts remaining to guess the number.")
-        num = int(input("Make a guess: "))
+        your_number = int(input("Make a guess: "))
 
-        if game_condition(num, original_number):
+        if game_condition(your_number, original_number):
             break
         if i == 1:
             print(f"You've run out of guesses. Number is {original_number}. You lose. \U0001F622")
